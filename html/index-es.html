@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="../src/img/favicon.png">
+  <title>NombreEmpresa - Correo Certificado Digital</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <h1 class="logo">NombreEmpresa</h1>
+  <nav class="nav">
+    <a href="#">Inicio</a>
+    <a href="#certificado-digital">Certificado digital</a>
+    <a href="#ventajas">Ventajas</a>
+    <a href="#sectores">Sectores</a>
+    <a href="#contacto">Contacto</a>
+    <a href="" id="open-visualizar-btn">Visualizar diseños</a>
+
+    <!-- Botones de idioma -->
+  </nav>
+    <div class="language-switcher">
+      <a href="index-es.html">
+        <img src="../src/img/BanderaEspaña.jpg" alt="Español">
+      </a>
+      <a href="index-en.html">
+        <img src="../src/img/BanderaInglaterra.avif" alt="English">
+      </a>
+      <a href="index-pt.html">
+        <img src="../src/img/BanderaPortugal.avif" alt="Português">
+      </a>
+    </div>
+</header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Notifica con validez legal, sin papel ni esperas</h2>
+    <p>El Correo Certificado Digital de NombreEmpresa es la alternativa 100% segura al burofax.</p>
+    <button class="cta" id="open-form-btn">Solicita una demo</button>
+  </section>
+
+  <!-- Formulario modal -->
+  <div class="modal" id="demo-form-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-form-btn">&times;</span>
+      <h3>Solicita tu demo</h3>
+      <form id="demo-form">
+        <input type="text" name="nombre" placeholder="Nombre y apellidos" required />
+        <input type="text" name="empresa" placeholder="Empresa" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="telefono" placeholder="Teléfono" required />
+
+        <select name="servicio" required>
+          <option value="">Tipo de servicios en los que estás interesado</option>
+          <option value="digitales_no_certificados">Envíos digitales no certificados</option>
+          <option value="certificados">Envíos certificados (email, sms)</option>
+          <option value="postales">Envíos postales</option>
+          <option value="multicanal">Comunicación multicanal</option>
+          <option value="otros">Otros (descríbelo en el cuerpo del mensaje)</option>
+        </select>
+        
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+        <label for="pdf">Sube tu diseño (PDF):</label>
+        <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+        <input type="hidden" name="nombreArchivo" id="nombreArchivo" />
+        <input type="hidden" name="fecha" id="fecha-envio"/>
+        <button type="submit" class="cta-alt">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- VISUALIZAR DISEÑOS: Modal y Formulario -->
+  <div class="modal" id="visualizar-form-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-visualizar-btn">&times;</span>
+      <h3>Visualiza tus diseños</h3>
+      <p>Introduce tu correo electrónico para buscar tus diseños pendientes de aprobación.</p>
+
+      <form id="buscar-form">
+        <input type="email" id="emailCliente" name="email" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="cta">Buscar diseños</button>
+      </form>
+
+      <div id="resultados" class="section" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- ¿Qué es? -->
+  <section id="certificado-digital" class="section">
+    <div class="content-image">
+      <div class="text-content">
+        <h3 class="tooltip-trigger" data-tooltip-id="tooltip-que-es">¿Qué es el Correo Certificado Digital?</h3>
+        <ul class="steps">
+          <li>Subes el documento</li>
+          <li>Lo certificamos digitalmente</li>
+          <li>Se envía y se registra</li>
+          <li>Recibes evidencia legal</li>
+        </ul>
+      </div>
+      <div class="image-content">
+        <img src="../src/img/certificadoDigital.png" alt="Certificado Digital">
+      </div>
+    </div>
+    
+    <!-- Tooltip -->
+    <div id="tooltip-que-es" class="tooltip">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Aliquam malesuada mauris ut est semper tristique. Nulla eget tincidunt nisi. 
+        Quisque pulvinar mauris sit amet lobortis hendrerit. 
+        Duis auctor metus id maximus aliquet. 
+        Suspendisse et tellus et metus scelerisque euismod sit amet sed ante. 
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
+        curae; Ut lacinia turpis dignissim arcu feugiat finibus.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ventajas -->
+  <section id="ventajas" class="section light">
+    <div class="content-image">
+      <div class="image-content">
+        <img src="../src/img/ventajas.png" alt="Ventajas clave">
+      </div>
+      <div class="text-content">
+        <h3 class="tooltip-trigger" data-tooltip-id="tooltip-ventajas">Ventajas clave</h3>
+        <ul class="steps">
+          <li>Ahorro de costes</li>
+          <li>Evidencia jurídica</li>
+          <li>Sin papel, sin esperas</li>
+          <li>Cumple RGPD y eIDAS</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip-ventajas" class="tooltip">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Aliquam malesuada mauris ut est semper tristique. Nulla eget tincidunt nisi. 
+        Quisque pulvinar mauris sit amet lobortis hendrerit. 
+        Duis auctor metus id maximus aliquet. 
+        Suspendisse et tellus et metus scelerisque euismod sit amet sed ante. 
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
+        curae; Ut lacinia turpis dignissim arcu feugiat finibus.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sectores -->
+  <section id="sectores" class="section">
+    <div class="content-image">
+      <div class="text-content">
+        <h3 class="tooltip-trigger" data-tooltip-id="tooltip-sectores">¿Quién lo usa?</h3>
+        <ul class="steps">
+          <li>Finanzas</li>
+          <li>Seguros</li>
+          <li>Recursos Humanos</li>
+          <li>Energía</li>
+          <li>Administración pública</li>
+        </ul>
+      </div>
+      <div class="image-content">
+        <img src="../src/img/sectores.png" alt="Sectores">
+      </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip-sectores" class="tooltip">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Aliquam malesuada mauris ut est semper tristique. Nulla eget tincidunt nisi. 
+        Quisque pulvinar mauris sit amet lobortis hendrerit. 
+        Duis auctor metus id maximus aliquet. 
+        Suspendisse et tellus et metus scelerisque euismod sit amet sed ante. 
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
+        curae; Ut lacinia turpis dignissim arcu feugiat finibus.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section id="contacto" class="cta-section">
+    <h3>¿Quieres comprobarlo tú mismo?</h3>
+    <p>Ponte en contacto con nosotros:</p>
+    <p class="contact-info">
+      <img src="../src/img/mail.png" alt="mail">info@empresaejemplogroup.com |
+      <img src="../src/img/telefono.png" alt="telefono">+34 123 456 789 |
+      <img src="../src/img/mailcomms.PNG" alt="mailcomm logo"><a href="">NombreEmpresa Group</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 NombreEmpresa Group | Política de privacidad | Aviso legal
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
