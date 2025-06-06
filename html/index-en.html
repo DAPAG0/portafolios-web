@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="../src/img/favicon.png">
+  <title>NombreEmpresa - Certified Digital Mail</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="logo">NombreEmpresa</h1>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#certificado-digital">Digital Certificate</a>
+      <a href="#ventajas">Advantages</a>
+      <a href="#sectores">Sectors</a>
+      <a href="#contacto">Contact</a>
+      <a href="" id="open-visualizar-btn">View Designs</a>
+    </nav>
+    <div class="language-switcher">
+      <a href="index-es.html"><img src="../src/img/BanderaEspaña.jpg" alt="Español"></a>
+      <a href="index-en.html"><img src="../src/img/BanderaInglaterra.avif" alt="English"></a>
+      <a href="index-pt.html"><img src="../src/img/BanderaPortugal.avif" alt="Português"></a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Notify with legal validity, without paper or delays</h2>
+    <p>MailTecK's Certified Digital Mail is the 100% secure alternative to registered letters.</p>
+    <button class="cta" id="open-form-btn">Request a Demo</button>
+  </section>
+
+  <!-- Demo Form Modal -->
+  <div class="modal" id="demo-form-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-form-btn">&times;</span>
+      <h3>Request Your Demo</h3>
+      <form id="demo-form">
+        <input type="text" name="nombre" placeholder="Full Name" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')" />
+        <input type="text" name="empresa" placeholder="Company" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')" />
+        <input type="email" name="email" placeholder="Email" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')" />
+
+        <input type="tel" name="telefono" placeholder="Phone" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')" />
+
+        <select name="servicio" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')">
+          <option value="">Type of services you are interested in</option>
+          <option value="digitales_no_certificados">Non-certified digital shipments</option>
+          <option value="certificados">Certified shipments (email, SMS)</option>
+          <option value="postales">Postal shipments</option>
+          <option value="multicanal">Multichannel communication</option>
+          <option value="otros">Others (describe in the message body)</option>
+        </select>
+
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Write your message here"></textarea>
+        <label for="pdf">Upload your design (PDF):</label>
+        <input type="file" id="pdf" name="pdf" accept="application/pdf" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')">
+        <input type="hidden" name="nombreArchivo" id="nombreArchivo" />
+        <input type="hidden" name="fecha" id="fecha-envio"/>
+        <button type="submit" class="cta-alt">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- View Designs Modal -->
+  <div class="modal" id="visualizar-form-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-visualizar-btn">&times;</span>
+      <h3>View Your Designs</h3>
+      <p>Enter your email to search for your designs pending approval.</p>
+
+      <form id="buscar-form">
+        <input type="email" id="emailCliente" name="email" placeholder="Your email address" required oninvalid="this.setCustomValidity('Please fill out this field')" oninput="this.setCustomValidity('')"/>
+        <button type="submit" class="cta">Search Designs</button>
+      </form>
+
+      <div id="resultados" class="section" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- What is it? -->
+  <section id="certificado-digital" class="section">
+    <div class="content-image">
+      <div class="text-content">
+        <h3 class="tooltip-trigger" data-tooltip-id="tooltip-que-es">What is Certified Digital Mail?</h3>
+        <ul class="steps">
+          <li>You upload the document</li>
+          <li>We certify it digitally</li>
+          <li>It is sent and recorded</li>
+          <li>You receive legal evidence</li>
+        </ul>
+      </div>
+      <div class="image-content">
+        <img src="../src/img/certificadoDigital.png" alt="Digital Certificate">
+      </div>
+    </div>
+
+    <div id="tooltip-que-es" class="tooltip">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+  </section>
+
+  <!-- Advantages -->
+  <section id="ventajas" class="section light">
+    <div class="content-image">
+      <div class="image-content">
+        <img src="../src/img/ventajas.png" alt="Key Advantages">
+      </div>
+      <div class="text-content">
+        <h3 class="tooltip-trigger" data-tooltip-id="tooltip-ventajas">Key Advantages</h3>
+        <ul class="steps">
+          <li>Cost savings</li>
+          <li>Legal evidence</li>
+          <li>Paperless, no waiting</li>
+          <li>Compliant with GDPR and eIDAS</li>
+        </ul>
+      </div>
+    </div>
+    <div id="tooltip-ventajas" class="tooltip">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section id="sectores" class="section">
+    <div class="content-image">
+      <div class="text-content">
+        <h3 class="tooltip-trigger" data-tooltip-id="tooltip-sectores">Who uses it?</h3>
+        <ul class="steps">
+          <li>Finance</li>
+          <li>Insurance</li>
+          <li>Human Resources</li>
+          <li>Energy</li>
+          <li>Public Administration</li>
+        </ul>
+      </div>
+      <div class="image-content">
+        <img src="../src/img/sectores.png" alt="Sectors">
+      </div>
+    </div>
+    <div id="tooltip-sectores" class="tooltip">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="contacto" class="cta-section">
+    <h3>Want to try it yourself?</h3>
+    <p>Get in touch with us:</p>
+    <p class="contact-info">
+      <img src="../src/img/mail.png" alt="mail">info@mailcommsgroup.com |
+      <img src="../src/img/telefono.png" alt="phone">+34 911 223 344 |
+      <img src="../src/img/mailcomms.PNG" alt="mailcomm logo"><a href="https://mailcommsgroup.com/">NombreEmpresa Group</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 NombreEmpresa Group | Privacy Policy | Legal Notice
+  </footer>
+
+  <script src="../js/index-en.js"></script>
+</body>
+</html>

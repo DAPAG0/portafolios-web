@@ -1,0 +1,422 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  padding-top: 95px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  color: #4b5563;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #2563eb;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #e0f2fe;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #1d4ed8;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.steps li {
+  background-color: #dbeafe;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.light {
+  background-color: #e0f2fe;
+}
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.advantages div {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sectors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.sectors div {
+  background-color: #dbeafe;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cta-section {
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta-alt {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-alt:hover {
+  background-color: #f3f4f6;
+}
+
+.footer {
+  background-color: #1e3a8a;
+  color: #d1d5db;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.content-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.image-content {
+  flex: 1;
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-info img {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .content-image {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+}
+
+/* Modal formulario */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content form input,
+.modal-content form select,
+.modal-content form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+textarea {
+  width: 100%; /* El textarea ocupa todo el ancho disponible */
+  max-width: 100%; /* Asegura que no se pueda expandir más allá del contenedor */
+  resize: vertical; /* Permite redimensionar solo verticalmente (a lo largo) */
+  padding: 0.75rem; /* Espaciado interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris claro */
+}
+
+
+.modal-content button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+}
+.close-btn:hover {
+  color: #000;
+}
+
+/* Tooltip para '¿Qué es el Correo Certificado Digital?' */
+.tooltip {
+  position: absolute;
+  background-color: #f9fafb;
+  color: #1f2937;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  font-size: 0.95rem;
+  z-index: 1500;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip.visible {
+  display: block;
+  opacity: 1;
+}
+
+.tooltip p {
+  margin: 0.5rem 0;
+}
+
+.tooltip-trigger {
+  position: relative;
+  cursor: help;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.tooltip-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.tooltip-trigger:hover {
+  color: #2563eb;
+}
+
+.tooltip-trigger:hover::after {
+  width: 100%;
+}
+
+/* Estilo para la sección de resultados de diseños */
+.pdf-entry {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Enlace con efecto hover azul */
+.pdf-entry a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.pdf-entry a:hover {
+  color: #2563eb;
+}
+
+/* Estilo para los radio-button tipo botón */
+.options {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.options label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: white;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options input[type="radio"]:checked + label {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Para el textarea */
+.pdf-entry textarea {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.language-switcher img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.language-switcher img:hover {
+  border-color: #2563eb;
+}
